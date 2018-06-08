@@ -79,9 +79,10 @@ class Window(QtWidgets.QMainWindow):
         self.tv = QPlainTextEdit(self)
         self.tv.move(400,20)
         self.tv.resize(100,250)
-        self.tv.textChanged.connect(self.submit)
+        #self.tv.textChanged.connect(self.submit)
         #self.tv.setLineWrapMode(self.tv.LineWrapMode)
         #self.tv.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        
         #self.tv.setPlainText()
 
         self.show()   
@@ -120,7 +121,7 @@ class Window(QtWidgets.QMainWindow):
         else:
             print(authToken)
             QtWidgets.QMessageBox.warning(self, 'Error', str(r.status_code))
-
+        
 
     def close_application(self):
         sys.exit()
